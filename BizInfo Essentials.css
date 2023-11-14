@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    transition: all .45s ease;
+}
+body{
+    display: grid;
+    grid-template-rows: 1f1 1fr 1fr;
+    border-radius: solid black 5px;
+    animation : showpic 4s 0s ease forwards ;
+    opacity: 0;
+    grid-gap: 5em;
+}
+
+@keyframes showpic {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+#homepg{
+    
+    width:"fit-content";
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(homepic.jpg);
+    padding: 10px 8%;
+    position: relative;
+}
+#opening{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate(-50% -50%);
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 900px;
+}
+#opening:hover{
+    color: grey;
+    cursor: pointer;
+    opacity: 0;
+}
+#homepg p{
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+}
+.slogan{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 900px;
+}
+
+.slogan:hover{
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: scale(1.3);
+  z-index: 2;
+    
+}
+.content{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 2em;
+margin-top: 20px;
+margin-left: 10px;
+margin-right: 10px;
+}
+.about-us{
+    margin: 10%;
+    
+}
+.additional-info{
+    margin: 10%;
+}
+
+.image-overview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+img{
+    border-radius: 5px;
+}
+
+.image-overview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.overview-content {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    transition: height 0.5s;
+    
+    
+}
+
+.image-overview:hover .overview-content {
+    height: 100%;
+    
+}
+.image-overview-huv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.image-overview-huv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s;
+}
+.image-overview-huv .overview-content-huv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.image-overview-huv:hover img {
+    opacity: 0;
+}
+.image-overview-huv:hover .overview-content-huv {
+    opacity: 1;
+}
+.image-overview-huv:hover {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(chat.jpg);
+   
+}
+
+
+
+.secondframe{
+    animation: showframe 3s 3s ease forwards;
+    opacity:0;
+}
+
+.firstframe {
+    position: fixed;
+    animation: hideframe 3s 3s ease forwards;
+    opacity: 1;
+}
+
+@keyframes showframe {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes hideframe {
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.line2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    margin-top: 5px;
+    animation: showframe 3s 3s ease forwards;
+    opacity:0;
+}
+.line3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    margin-top: 5px;
+    animation: showframe 3s 3s ease forwards;
+    opacity:0;
+}
